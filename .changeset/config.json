@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.2.0/schema.json",
+  "access": "restricted", // change as necessary to `public` or `restricted`.
+  "baseBranch": "main",
+  "changelog": ["@changesets/changelog-github", { "repo": "brionmario/<repo>" }], // replace `<repo>` with the repo name.
+  "commit": false,
+  "fixed": [],
+  "ignore": [],
+  "linked": [],
+  "privatePackages": {
+    "version": true,
+    "tag": true
+  },
+  "root": {
+    "packageDir": "."
+  },
+  "tagFormat": "@<scope>/<package>@${version}", // change the `scope` & `package` as necessary. ex: `@brionmario/website@${version}`
+  "updateInternalDependencies": "patch"
+}
