@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@<scope>/<package-1>": ["packages/<package-1>/src/index.ts"] // Change the `<scope>` & `<package-*>` accordingly.
+    }
+  }
+}
