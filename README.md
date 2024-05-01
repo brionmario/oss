@@ -6,7 +6,7 @@ This repository contains reusable files and configurations that are commonly use
 
 This section provides a guide on how to set up a basic repository for OSS projects.
 
-### GitHub repository
+### Creating a GitHub repository
 
 Create a new repository from the GitHub UI or the `gh` CLI.
 Make it empty
@@ -14,9 +14,9 @@ Make it empty
 > [!TIP]
 > Initialize it as an empty repository to make it easier for mono-repo management tools and to make consistent commit messages.
 
-### npm Client
+### Setup a npm Client
 
-### pnpm
+#### pnpm
 
 I use [pnpm](https://pnpm.io/) as my preferred npm client. It's fast and it saves disk space by using a single storage for all packages across projects.
 
@@ -24,11 +24,11 @@ Refer to the [pnpm docs](https://pnpm.io/installation) for installation instruct
 
 ### Repo Management
 
-### Turborepo
+#### Turborepo
 
 These days, I use [turborepo](https://turbo.build/repo) as my go-to tool for managing monorepos. It's fast, easy to use, and has a great CLI.
 
-#### Creating a new monorepo
+##### Creating a new monorepo
 
 ```bash
 pnpm dlx create-turbo@latest
@@ -79,9 +79,20 @@ pnpm dlx create-turbo@latest
 └── turbo.json # turborepo config
 ```
 
+### .gitignore
+
+Use the `.gitignore` files that come with the monorepo management tools or boilerplates. Or use one of the relevant ones from [.gitignore](./gitignore) folder.
+
+
+> [!TIP]
+> Most .gitignore templates doesn't exclude some system files like MacOS `.DS_Store` files. Hence, I append some of [these excludes](./.gitignore/__COMMON__.gitignore) generally with even the ignore files generated from stock templates.
+
 ### Code Linting & Formatting
 
 #### ESLint
+
+> [!WARNING]
+> To use ESLint effectively, ensure you have it installed in your IDE or code editor. You can install ESLint via your editor's extension marketplace or by following the instructions on the [ESLint website](https://eslint.org/).
 
 I've written my own ESLint plugin and it's available on npm as [@brionmario/eslint-plugin](https://www.npmjs.com/package/@brionmario/eslint-plugin).
 
@@ -93,13 +104,22 @@ pnpm add -D eslint @brionmario/eslint-plugin
 
 #### Prettier
 
+> [!WARNING]
+> Before using Prettier, make sure to install the [Prettier plugin](https://prettier.io/docs/en/editors.html) for your code editor. This ensures consistent code formatting across your project and enhances collaboration.
+
 I've a custom prettier config that I use for all my projects. It's available on npm as [@brionmario/prettier-config](https://www.npmjs.com/package/@brionmario/prettier-config).
 
-Installation can be done using the following command:
+- Installation can be done using the following command:
 
-```bash
-pnpm add -D prettier @brionmario/prettier-config
-```
+  ```bash
+  pnpm add -D prettier @brionmario/prettier-config
+  ```
+
+- Add the following `npm` script to run prettier.
+
+  ```json
+  "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx}\""
+  ```
 
 ### Versioning & Releases
 
