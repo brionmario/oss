@@ -4,7 +4,7 @@
     <img src="https://user-images.githubusercontent.com/25959096/206865437-92fa4df7-2f76-40a2-9298-ad433997d028.png" alt="Brion Mario's logo" height="24" width="auto" style="margin-right: -5px">
     's OSS Configs
   </h1>
-  <p align="center" style="font-size: 1.2rem;">Shareable configurations to maintain consistency across <br><a href="https://brionmario.com">my</a> opensource projects.</p>
+  <p align="center" style="font-size: 1.2rem;">Shareable configurations to maintain consistency across <br>my opensource projects.</p>
 </div>
 
 <div align="center">
