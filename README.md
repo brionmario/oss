@@ -81,11 +81,11 @@ pnpm dlx create-turbo@latest
 
 ### .gitignore
 
-Use the `.gitignore` files that come with the monorepo management tools or boilerplates. Or use one of the relevant ones from [.gitignore](./gitignore) folder.
+Use the `.gitignore` files that come with the monorepo management tools or boilerplates. Or use one of the relevant ones from [.gitignore](.gitignore) folder.
 
 
 > [!TIP]
-> Most .gitignore templates doesn't exclude some system files like MacOS `.DS_Store` files. Hence, I append some of [these excludes](./.gitignore/__COMMON__.gitignore) generally with even the ignore files generated from stock templates.
+> Most .gitignore templates doesn't exclude some system files like MacOS `.DS_Store` files. Hence, I append some of [these excludes](.gitignore/__COMMON__.gitignore) generally with even the ignore files generated from stock templates.
 
 ### Code Linting & Formatting
 
@@ -96,11 +96,17 @@ Use the `.gitignore` files that come with the monorepo management tools or boile
 
 I've written my own ESLint plugin and it's available on npm as [@brionmario/eslint-plugin](https://www.npmjs.com/package/@brionmario/eslint-plugin).
 
-Installation can be done using the following command:
+- Installation can be done using the following command:
 
-```bash
-pnpm add -D eslint @brionmario/eslint-plugin
-```
+  ```bash
+  pnpm add -D eslint @brionmario/eslint-plugin
+  ```
+
+- Add the following `npm` script to run eslint on common files. (You may skip this if the monorepo management tool or the boilerplate adds their own script.)
+
+  ```json
+  "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+  ```
 
 #### Prettier
 
@@ -115,11 +121,21 @@ I've a custom prettier config that I use for all my projects. It's available on 
   pnpm add -D prettier @brionmario/prettier-config
   ```
 
-- Add the following `npm` script to run prettier.
+- Add the following `npm` script to run prettier. (You may skip this if the monorepo management tool or the boilerplate adds their own script.)
 
   ```json
   "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx}\""
   ```
+
+- Add `prettier.config.cjs` files.
+
+  - For Monorepo root, add the [prettier.config.cjs/__MONOREPO-ROOT__prettier.config.cjs](prettier.config.cjs/__MONOREPO-ROOT__prettier.config.cjs)
+
+- Add `.prettierignore` files.
+
+  - For Monorepo root, add the [.prettierignore/__MONOREPO-ROOT__.prettierignore](.prettierignore/__MONOREPO-ROOT__.prettierignore)
+  
+  - For `Node.JS`, start with [.prettierignore/__NODEJS__.prettierignore](.prettierignore/__NODEJS__.prettierignore)
 
 ### Versioning & Releases
 
@@ -127,7 +143,37 @@ This section provides information on how to manage versioning and releases with 
 
 #### Changesets
 
-This section provides information on how to manage changesets for your OSS projects.
+I've been loving Changesets for release and versioning recently.
+
+- Installation can be done using the following command:
+
+  ```bash
+  pnpm add -D @changesets/cli
+  ```
+
+- To initialize:
+
+  ```bash
+  npx changeset init
+  ```
+  
+The above steps with install the Changesets CLI and setup a basic the changeset config file.
+
+- Install `@changesets/changelog-github` plugin for GitHub flavored Changelog generation.
+
+  ```bash
+  pnpm add -D @changesets/changelog-github
+  ```
+
+- Add the following two `npm` scripts.
+
+  ```json
+  "publish:packages": "changeset publish",
+  "version:packages": "changeset version && pnpm install --lockfile-only"
+  ```
+  
+- Replace the default `.changeset/config.json` file with [this config](.changeset/config.json) file and adjust the configurations accordingly removing the comments.
+
 
 ## Contributing
 
