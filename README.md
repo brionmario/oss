@@ -142,7 +142,7 @@ Add the following `npm` script to run eslint on common files. (You may skip this
 ##### For monorepo root
 
 Add the following `.eslintrc.cjs` file at the mono-repo root.
-  - [.eslintrc.js/__MONOREPO-ROOT__.eslintrc.js](.eslintrc.js/__MONOREPO-ROOT__.eslintrc.js)
+  - [.eslintrc.js](eslint/.eslintrc.js/__MONOREPO-ROOT__.eslintrc.js)
 
 #### Add Ignore file
 
@@ -150,7 +150,7 @@ Add the following `.eslintrc.cjs` file at the mono-repo root.
 
 Add the following `.eslintignore`  file at the mono-repo root.
 
-  - [.eslintignore/__MONOREPO-ROOT__.eslintignore](.eslintignore/__MONOREPO-ROOT__.eslintignore)
+  - [.eslintignore](eslint/.eslintignore/__MONOREPO-ROOT__.eslintignore)
 
 ### Prettier
 
@@ -181,7 +181,7 @@ Add the following `npm` script to run prettier. (You may skip this if the monore
 
 Add the following `prettier.config.cjs` file at the mono-repo root.
 
-  - [prettier.config.cjs/__MONOREPO-ROOT__prettier.config.cjs](prettier.config.cjs/__MONOREPO-ROOT__prettier.config.cjs)
+  - [prettier.config.cjs](prettier/prettier.config.cjs/__MONOREPO-ROOT__prettier.config.cjs)
 
 #### Add Ignore file
 
@@ -189,13 +189,13 @@ Add the following `prettier.config.cjs` file at the mono-repo root.
 
 Add the following `.prettierignore` file at the mono-repo root.
 
-  - [.prettierignore/__MONOREPO-ROOT__.prettierignore](.prettierignore/__MONOREPO-ROOT__.prettierignore)
+  - [.prettierignore](prettier/.prettierignore/__MONOREPO-ROOT__.prettierignore)
 
 ##### For `Node.js` projects
 
 Add the following `.prettierignore` file at the root of the `Node.js` based package.
 
-  - [.prettierignore/__NODEJS__.prettierignore](.prettierignore/__NODEJS__.prettierignore)
+  - [.prettierignore](prettier/.prettierignore/__NODEJS__.prettierignore)
 
 ## Versioning & Releases
 
@@ -257,29 +257,18 @@ pnpm add -D typescript
 #### For monorepo root
 
 For the monorepo root, use the following `tsconfig.base.json`. This file simplifies configuration by setting up paths for easy navigation to the source code of your packages.
-  - [tsconfig.base.json](tsconfig/__MONOREPO-ROOT__tsconfig.base.json) file
+  - [tsconfig.base.json](typescript/tsconfig/__MONOREPO-ROOT__tsconfig.base.json) file
 
 #### For pure JavaScript based packages
 
-For pure JS based packages, use the following `tsconfig.json`.
-  - [tsconfig/pure-js](tsconfig/pure-js).
+For pure JS based packages, use the following `tsconfig.json` files.
+  - [tsconfig](typescript/tsconfig/__PURE-JS__/).
 
-## Contributing
+## Bundling
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+### Rollup
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+#### For pure JavaScript based packages
 
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/reponame](https://github.com/yourusername/reponame)
+Use the following `rollup.config.js` configuration for bundling pure JavaScript projects.
+- [rollup.config.js](rollup/rollup.config.js/__PURE_JS__rollup.config.js)
