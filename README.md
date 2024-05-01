@@ -89,6 +89,16 @@ Use the `.gitignore` files that come with the monorepo management tools or boile
 
 ### Code Linting & Formatting
 
+#### EditorConfig
+
+EditorConfig helps maintain consistent coding styles across various editors and IDEs. Below are the EditorConfig files used in this repository:
+
+- For the Monorepo root, use the following [`.editorconfig`](.editorconfig/__MONOREPO-ROOT__.editorconfig) file.
+
+- For nested packages, you can use a separate `.editorconfig` file tailored to the specific requirements of that package or just inherit the root `..editorconfig` as shown in the following example configuration:
+
+  - [`.editorconfig`](.editorconfig/__NESTED_PACKAGE__.editorconfig) for nested packages.
+
 #### ESLint
 
 > [!WARNING]
@@ -107,6 +117,14 @@ I've written my own ESLint plugin and it's available on npm as [@brionmario/esli
   ```json
   "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
   ```
+
+- Add `.eslintrc.js` files.
+
+  - For Monorepo root, add the [.eslintrc.js/__MONOREPO-ROOT__.eslintrc.js](.eslintrc.js/__MONOREPO-ROOT__.eslintrc.js)
+
+- Add `.eslintignore` files.
+
+  - For Monorepo root, add the [.eslintignore/__MONOREPO-ROOT__.eslintignore](.eslintignore/__MONOREPO-ROOT__.eslintignore)
 
 #### Prettier
 
