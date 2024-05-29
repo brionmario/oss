@@ -288,3 +288,21 @@ pnpm add -D @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-t
 
 Use the following `rollup.config.js` configuration for bundling pure JavaScript projects.
 - [rollup.config.js](rollup/rollup.config.js/__PURE_JS__/rollup.config.js)
+
+## Testing
+
+### Unit Tests
+
+#### For pure JavaScript based packages
+
+##### Install
+
+```bash
+pnpm add -D jest ts-jest @types/jest @jest/globals
+```
+
+##### Add `jest.config.js` file
+
+Use the following `jest.config.js` configuration for unit testing pure JavaScript projects.
+
+- [jest.config.js](jest/jest.config.js/__PURE_JS__/jest.config.js)

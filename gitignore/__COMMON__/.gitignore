@@ -1,2 +1,3 @@
-# MacOS System Files
+# misc
 .DS_Store
+*.pem

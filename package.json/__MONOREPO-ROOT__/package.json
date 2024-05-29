@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "name": "@<scope>/workspace",
+  "version": "0.0.0",
+  "description": "Meaningful project description.",
+  "keywords": [
+    "brionmario",
+    "opensource",
+    // other relevant keywords
+  ],
+  "homepage": "https://github.com/brionmario/<repo>#readme",
+  "bugs": {
+    "url": "https://github.com/brionmario/<repo>/issues"
+  },
+  "license": "MIT",
+  "author": "Brion Mario",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brionmario/<repo>"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "changeset": "changeset",
+    "dev": "turbo run dev --parallel",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx}\"",
+    "lint": "turbo run lint",
+    "publish:packages": "changeset publish",
+    "publish:release": "semantic-release",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "version:packages": "changeset version && pnpm install --lockfile-only"
+  },
+  "devDependencies": {
+    "@brionmario/eslint-plugin": "^0.2.9",
+    "@brionmario/prettier-config": "^0.1.0",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.0",
+    "eslint": "^8.41.0",
+    "eslint-config-turbo": "^1.10.3",
+    "prettier": "^2.8.8",
+    "turbo": "^1.11.2",
+    "typescript": "^5.4.2"
+  },
+  "workspaces": [
+    // Add your packages here
+  ]
+}

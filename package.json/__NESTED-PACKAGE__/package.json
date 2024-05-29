@@ -1,0 +1,38 @@
+{
+  "name": "@<scope>/<package>",
+  "version": "0.0.0",
+  "description": "Meaningful package description.",
+  "keywords": [
+    "brionmario",
+    "opensource",
+    // other relevant keywords
+  ],
+  "homepage": "https://github.com/brionmario/<repo>#readme",
+  "bugs": {
+    "url": "https://github.com/brionmario/<repo>/issues"
+  },
+  "license": "MIT",
+  "author": "Brion Mario",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brionmario/aydan-ui",
+    "directory": "packages/aydan-ui-themes"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx}\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "devDependencies": {
+    "@brionmario/eslint-plugin": "^0.2.9",
+    "@brionmario/prettier-config": "^0.1.0",
+    "eslint": "^8.41.0",
+    "prettier": "^2.8.8"
+  },
+  "engines": {
+    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
