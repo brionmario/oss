@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "@brionmario/oss",
+  "version": "0.0.0",
+  "description": "Guide to creating and maintaining my own open-source projects",
+  "keywords": [
+    "oss",
+    "open-source",
+    "guide"
+  ],
+  "homepage": "https://github.com/brionmario/oss#readme",
+  "bugs": {
+    "url": "https://github.com/brionmario/oss/issues"
+  },
+  "license": "MIT",
+  "author": "Brion Mario",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brionmario/oss"
+  },
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx}\"",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix"
+  },
+  "devDependencies": {
+    "@brionmario/eslint-plugin": "^0.3.3",
+    "@brionmario/prettier-config": "^0.1.0",
+    "eslint": "^8.41.0",
+    "prettier": "^2.8.8"
+  },
+  "packageManager": "pnpm@8.6.10"
+}
