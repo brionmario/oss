@@ -61,6 +61,15 @@
       - [Install](#install-4)
       - [Add `rollup.config.js` file](#add-rollupconfigjs-file)
       - [Add `rollup.config.ts` file](#add-rollupconfigts-file)
+- [Testing](#testing)
+  * [Unit Tests](#unit-tests)
+    + [For vanilla JavaScript/Typescript packages](#for-vanilla-javascripttypescript-packages)
+      - [Add `jest.config` file](#add-jestconfig-file)
+      - [`jest.config.js`](#jestconfigjs)
+      - [`jest.config.ts`](#jestconfigts)
+      - [Add `tsconfig.spec.json` file](#add-tsconfigspecjson-file)
+      - [Add `npm` scripts](#add-npm-scripts-3)
+      - [Setup test files](#setup-test-files)
 
 <!-- TOS:END -->
 
