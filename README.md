@@ -17,6 +17,53 @@
   <p align="center">☢️ Disclaimer: The configurations provided here are tailored to my individual coding style and workflow. They are based on my own experiences, preferences, and opinions about best practices in software development. However, please note that coding standards and best practices evolve over time, and as such, these configurations may be subject to frequent updates and changes. Users are encouraged to review and adapt these configurations according to their own requirements and preferences.</p>
 </div>
 
+## Table of Contents
+
+<!-- TOS:START - Do not remove or modify this section -->
+
+- [Table of Contents](#table-of-contents)
+- [Creating a GitHub repository](#creating-a-github-repository)
+  * [.gitignore](#gitignore)
+- [Setup a npm Client](#setup-a-npm-client)
+  * [pnpm](#pnpm)
+- [Repo Management](#repo-management)
+  * [Turborepo](#turborepo)
+    + [Creating a new monorepo](#creating-a-new-monorepo)
+    + [Pure JavaScript projects](#pure-javascript-projects)
+    + [Add `npm` scripts](#add-npm-scripts)
+    + [Add config file](#add-config-file)
+      - [For monorepo root](#for-monorepo-root)
+    + [Add Ignore file](#add-ignore-file)
+      - [For monorepo root](#for-monorepo-root-1)
+  * [Prettier](#prettier)
+    + [Install](#install)
+    + [Add `npm` scripts](#add-npm-scripts-1)
+    + [Add config file](#add-config-file-1)
+      - [For monorepo root](#for-monorepo-root-2)
+    + [Add Ignore file](#add-ignore-file-1)
+      - [For monorepo root](#for-monorepo-root-3)
+      - [For `Node.js` projects](#for-nodejs-projects)
+- [Versioning & Releases](#versioning--releases)
+  * [Changesets](#changesets)
+    + [Install](#install-1)
+    + [Initialize](#initialize)
+    + [Configure GitHub flavored changelogs](#configure-github-flavored-changelogs)
+    + [Add `npm` scripts](#add-npm-scripts-2)
+    + [Update the default `.changeset/config.json`](#update-the-default-changesetconfigjson)
+- [Typescript Support](#typescript-support)
+    + [Install](#install-2)
+    + [For monorepo root](#for-monorepo-root-4)
+    + [For pure JavaScript based packages](#for-pure-javascript-based-packages)
+- [Bundling](#bundling)
+  * [Rollup](#rollup)
+    + [Install](#install-3)
+    + [For pure JavaScript based packages](#for-pure-javascript-based-packages-1)
+      - [Install](#install-4)
+      - [Add `rollup.config.js` file](#add-rollupconfigjs-file)
+      - [Add `rollup.config.ts` file](#add-rollupconfigts-file)
+
+<!-- TOS:END -->
+
 ## Creating a GitHub repository
 
 Create a new repository from the GitHub UI or the `gh` CLI.

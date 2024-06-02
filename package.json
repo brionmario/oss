@@ -20,13 +20,14 @@
   },
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx}\"",
-    "lint": "turbo run lint",
-    "lint:fix": "turbo run lint:fix"
+    "generate:readme:tos": "node ./scripts/generate-readme-tos.js",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-pattern 'setup-guide/*' ."
   },
   "devDependencies": {
     "@brionmario/eslint-plugin": "^0.3.3",
     "@brionmario/prettier-config": "^0.1.0",
     "eslint": "^8.41.0",
+    "markdown-toc": "^1.2.0",
     "prettier": "^2.8.8"
   },
   "packageManager": "pnpm@8.6.10"
