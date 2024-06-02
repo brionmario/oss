@@ -289,20 +289,69 @@ pnpm add -D @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-t
 Use the following `rollup.config.js` configuration for bundling pure JavaScript projects.
 - [rollup.config.js](rollup/rollup.config.js/__PURE_JS__/rollup.config.js)
 
+##### Add `rollup.config.ts` file 
+
+Install `@types/node` to use resolve type definitions for Node.js modules.
+
+```bash
+pnpm add -D @types/node
+```
+
+Use the following `rollup.config.ts` configuration for bundling TypeScript projects.
+- [rollup.config.ts](rollup/rollup.config.ts/__PURE_JS__/rollup.config.ts)
+
+> [!IMPORTANT]
+> Rollup throws and error when the const declarations have a type in the config file.
+Hence, I've used suppressed the `@typescript-eslint/typedef` rule for the config file.
+
 ## Testing
 
 ### Unit Tests
 
-#### For pure JavaScript based packages
+#### For vanilla JavaScript/Typescript packages
 
-##### Install
+##### Add `jest.config` file
+
+##### `jest.config.js`
+
+Install `jest` to use Jest for unit testing.
 
 ```bash
-pnpm add -D jest ts-jest @types/jest @jest/globals
+pnpm add -D jest
 ```
-
-##### Add `jest.config.js` file
 
 Use the following `jest.config.js` configuration for unit testing pure JavaScript projects.
 
 - [jest.config.js](jest/jest.config.js/__PURE_JS__/jest.config.js)
+
+##### `jest.config.ts`
+
+Install `ts-jest` and `@jest/types` to use TypeScript in Jest configuration.
+
+```bash
+pnpm add -D ts-jest @jest/types @types/jest @types/node
+```
+
+Use the following `jest.config.ts` configuration for unit testing pure JavaScript projects.
+
+- [jest.config.ts](jest/jest.config.ts/__PURE_JS__/jest.config.ts)
+
+##### Add `tsconfig.spec.json` file
+
+Use the following `tsconfig.spec.json` configuration for unit testing pure JavaScript projects.
+
+- [tsconfig.spec.json](typescript/tsconfig/__PURE-JS__/tsconfig.spec.json)
+
+##### Add `npm` scripts
+
+Add the following `npm` script to run tests. (You may skip this if the monorepo management tool or the boilerplate adds their own script.)
+
+```json
+    "test": "pnpm jest --passWithNoTests"
+```
+
+##### Setup test files
+
+Add the following `setup-test.ts` file to the `root` directory of the package.
+
+- [setup-test.ts](jest/test-configs/setup-test.ts)
