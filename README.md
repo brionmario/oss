@@ -298,11 +298,13 @@ Add the following two `npm` scripts.
 
 Replace the default `.changeset/config.json` file with [this config](.changeset/config.json) file and adjust the configurations accordingly removing the comments.
 
-## Typescript
+## Static Analysis
+
+### Typescript
 
 To ensure consistent TypeScript configuration across the repository, use the following base configuration file:
 
-### Install
+##### Install
 
 Installation can be done using the following command:
 
@@ -310,7 +312,7 @@ Installation can be done using the following command:
 pnpm add -D typescript
 ```
 
-### For monorepo root
+#### For monorepo root
 
 For the monorepo root, use the following `tsconfig.base.json`. This file simplifies configuration by setting up paths for easy navigation to the source code of your packages.
   - [tsconfig.base.json](./setup-guide/typescript/tsconfig/mono-repo/tsconfig.base.json) file
@@ -329,7 +331,7 @@ For React based packages, use the following `tsconfig.json` files.
 
 ### Rollup
 
-#### Install
+##### Install
 
 Installation of the main `rollup` package can be done using the following command:
 
@@ -337,29 +339,59 @@ Installation of the main `rollup` package can be done using the following comman
 pnpm add -D rollup
 ```
 
-#### For pure JavaScript based packages
+#### For Node.js
 
 ##### Install
 
 ```bash
-pnpm add -D @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-typescript rollup-plugin-dts rollup-plugin-peer-deps-external rollup-plugin-terser
+pnpm add -D @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-typescript rollup-plugin-dts rollup-plugin-peer-deps-external rollup-plugin-terser @rollup/plugin-terser rollup-plugin-preserve-directives
 ```
 
-##### Add `rollup.config.js` file 
+##### Add Rollup Config
 
-Use the following `rollup.config.js` configuration for bundling pure JavaScript projects.
-- [rollup.config.js](rollup/rollup.config.js/__PURE_JS__/rollup.config.js)
+Use the following `rollup.config.js` configuration for bundling Node.js based projects.
 
-##### Add `rollup.config.ts` file 
+##### `rollup.config.js`
 
-Install `@types/node` to use resolve type definitions for Node.js modules.
+If you prefer to use JavaScript for the configuration, use the following `rollup.config.js` configuration.
+
+- [rollup.config.js](./setup-guide/rollup/rollup.config.js/node/rollup.config.js)
+
+##### `rollup.config.ts`
+
+If you prefer to use TypeScript for the configuration, use the following `rollup.config.ts` configuration and install the relevant types.
 
 ```bash
 pnpm add -D @types/node
 ```
 
-Use the following `rollup.config.ts` configuration for bundling TypeScript projects.
-- [rollup.config.ts](rollup/rollup.config.ts/__PURE_JS__/rollup.config.ts)
+- [rollup.config.ts](./setup-guide/rollup/rollup.config.ts/node/rollup.config.ts)
+
+> [!IMPORTANT]
+> Rollup throws and error when the const declarations have a type in the config file.
+Hence, I've used suppressed the `@typescript-eslint/typedef` rule for the config file.
+
+#### For React
+
+##### Install
+
+```bash
+pnpm add -D @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-typescript rollup-plugin-dts rollup-plugin-peer-deps-external rollup-plugin-terser @rollup/plugin-terser rollup-plugin-preserve-directives
+```
+
+##### Add Rollup Config
+
+Use the following `rollup.config.js` configuration for bundling React based projects.
+
+##### `rollup.config.ts`
+
+If you prefer to use TypeScript for the configuration, use the following `rollup.config.ts` configuration and install the relevant types.
+
+```bash
+pnpm add -D @types/node
+```
+
+- [rollup.config.ts](./setup-guide/rollup/rollup.config.ts/react/rollup.config.ts)
 
 > [!IMPORTANT]
 > Rollup throws and error when the const declarations have a type in the config file.
