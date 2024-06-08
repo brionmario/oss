@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "types",
+    "outDir": "dist",
+    "types": ["node"]
+  },
+  "exclude": ["**/__tests__", "**/*.test.{ts,tsx,js,jsx}", "**/*.spec.{ts,tsx,js,jsx}"],
+  "extends": "./tsconfig.json",
+  "include": ["src/**/*.{js,jsx,ts,tsx}"]
+}
