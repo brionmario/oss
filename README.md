@@ -298,11 +298,11 @@ Add the following two `npm` scripts.
 
 Replace the default `.changeset/config.json` file with [this config](.changeset/config.json) file and adjust the configurations accordingly removing the comments.
 
-## Typescript Support
+## Typescript
 
-To ensure consistent TypeScript configuration across your monorepo, you can use the following base configuration file:
+To ensure consistent TypeScript configuration across the repository, use the following base configuration file:
 
-#### Install
+### Install
 
 Installation can be done using the following command:
 
@@ -310,15 +310,20 @@ Installation can be done using the following command:
 pnpm add -D typescript
 ```
 
-#### For monorepo root
+### For monorepo root
 
 For the monorepo root, use the following `tsconfig.base.json`. This file simplifies configuration by setting up paths for easy navigation to the source code of your packages.
-  - [tsconfig.base.json](typescript/tsconfig/__MONOREPO-ROOT__/tsconfig.base.json) file
+  - [tsconfig.base.json](./setup-guide/typescript/tsconfig/mono-repo/tsconfig.base.json) file
 
-#### For pure JavaScript based packages
+#### For Node.js
 
-For pure JS based packages, use the following `tsconfig.json` files.
-  - [tsconfig](typescript/tsconfig/__PURE-JS__/).
+For Node.js based packages, use the following `tsconfig.json` files.
+  - [tsconfig](./setup-guide/typescript/tsconfig/node/).
+
+#### For React
+
+For React based packages, use the following `tsconfig.json` files.
+  - [tsconfig](./setup-guide/typescript/tsconfig/react/).
 
 ## Bundling
 
@@ -364,7 +369,7 @@ Hence, I've used suppressed the `@typescript-eslint/typedef` rule for the config
 
 ### Unit Tests
 
-#### For vanilla JavaScript/Typescript packages
+#### Basic setup for JavaScript based projects
 
 ##### Add `jest.config` file
 
@@ -385,7 +390,7 @@ Use the following `jest.config.js` configuration for unit testing pure JavaScrip
 Install `ts-jest` and `@jest/types` to use TypeScript in Jest configuration.
 
 ```bash
-pnpm add -D ts-jest @jest/types @types/jest @types/node
+pnpm add -D ts-jest ts-node @jest/types @types/jest @types/node
 ```
 
 Use the following `jest.config.ts` configuration for unit testing pure JavaScript projects.
@@ -411,3 +416,11 @@ Add the following `npm` script to run tests. (You may skip this if the monorepo 
 Add the following `setup-test.ts` file to the `root` directory of the package.
 
 - [setup-test.ts](jest/test-configs/setup-test.ts)
+
+#### For React projects
+
+##### Install React Testing Library
+
+```bash
+pnpm add -D @testing-library/react @testing-library/dom @types/react @types/react-dom jest-environment-jsdom
+```
