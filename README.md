@@ -215,7 +215,7 @@ Add the following `.eslintignore`  file at the mono-repo root.
 
 I've a custom prettier config that I use for all my projects. It's available on npm as [@brionmario/prettier-config](https://www.npmjs.com/package/@brionmario/prettier-config).
 
-#### Install
+##### Install
 
 Installation can be done using the following command:
 
@@ -237,7 +237,7 @@ Add the following `npm` script to run prettier. (You may skip this if the monore
 
 Add the following `prettier.config.cjs` file at the mono-repo root.
 
-  - [prettier.config.cjs](prettier/prettier.config.cjs/__MONOREPO-ROOT__/prettier.config.cjs)
+  - [prettier.config.cjs](./setup-guide/prettier/prettier.config.cjs/mono-repo/prettier.config.cjs)
 
 #### Add Ignore file
 
@@ -245,13 +245,13 @@ Add the following `prettier.config.cjs` file at the mono-repo root.
 
 Add the following `.prettierignore` file at the mono-repo root.
 
-  - [.prettierignore](prettier/.prettierignore/__MONOREPO-ROOT__/.prettierignore)
+  - [.prettierignore](./setup-guide/prettier/.prettierignore/mono-repo/.prettierignore)
 
-##### For `Node.js` projects
+##### For `Node.js`
 
 Add the following `.prettierignore` file at the root of the `Node.js` based package.
 
-  - [.prettierignore](prettier/.prettierignore/__NODEJS__/.prettierignore)
+  - [.prettierignore](./setup-guide/prettier/.prettierignore/node/.prettierignore)
 
 ## Versioning & Releases
 
@@ -317,9 +317,9 @@ pnpm add -D typescript
 For the monorepo root, use the following `tsconfig.base.json`. This file simplifies configuration by setting up paths for easy navigation to the source code of your packages.
   - [tsconfig.base.json](./setup-guide/typescript/tsconfig/mono-repo/tsconfig.base.json) file
 
-#### For Node.js
+#### For `Node.js`
 
-For Node.js based packages, use the following `tsconfig.json` files.
+For `Node.js` based packages, use the following `tsconfig.json` files.
   - [tsconfig](./setup-guide/typescript/tsconfig/node/).
 
 #### For React
@@ -339,7 +339,7 @@ Installation of the main `rollup` package can be done using the following comman
 pnpm add -D rollup
 ```
 
-#### For Node.js
+#### For `Node.js`
 
 ##### Install
 
@@ -349,7 +349,7 @@ pnpm add -D @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-t
 
 ##### Add Rollup Config
 
-Use the following `rollup.config.js` configuration for bundling Node.js based projects.
+Use the following `rollup.config.js` configuration for bundling `Node.js` based projects.
 
 ##### `rollup.config.js`
 
