@@ -5,7 +5,17 @@
     "outDir": "dist",
     "types": ["node"]
   },
-  "exclude": ["**/__tests__", "**/*.test.{ts,tsx,js,jsx}", "**/*.spec.{ts,tsx,js,jsx}"],
+  "exclude": [
+    "**/__tests__",
+    "**/*.test.js",
+    "**/*.test.jsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.js",
+    "**/*.spec.jsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+  ],
   "extends": "./tsconfig.json",
-  "include": ["src/**/*.{js,jsx,ts,tsx}"]
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
 }

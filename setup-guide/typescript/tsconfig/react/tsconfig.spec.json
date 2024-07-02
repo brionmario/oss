@@ -5,5 +5,19 @@
     "types": ["jest", "node", "@testing-library/jest-dom", "@testing-library/jest-dom/jest-globals"]
   },
   "extends": "./tsconfig.json",
-  "include": ["test-configs/**/*", "jest.config.ts", "**/*.{test,spec}.{ts,tsx,js,jsx,d.ts}"]
+  "include": [
+    "test-configs/**/*",
+    "jest.config.js",
+    "jest.config.ts",
+    "**/*.test.js",
+    "**/*.test.jsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.js",
+    "**/*.spec.jsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.d.ts",
+    "**/*.spec.d.ts"
+  ]
 }
