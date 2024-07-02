@@ -11,6 +11,8 @@
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
 </div>
 
+
+
 <br>
 
 <div align="center">
@@ -381,7 +383,7 @@ pnpm add -D @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-t
 
 ##### Add Rollup Config
 
-Use the following `rollup.config.js` configuration for bundling React based projects.
+Use the following Rollup configurations for bundling React based projects.
 
 ##### `rollup.config.ts`
 
@@ -399,13 +401,20 @@ Hence, I've used suppressed the `@typescript-eslint/typedef` rule for the config
 
 ## Testing
 
-### Unit Tests
+### Jest
 
-#### Basic setup for JavaScript based projects
+##### Add Jest Config
 
-##### Add `jest.config` file
+Use the following configurations for Jest.
 
-##### `jest.config.js`
+##### `jest.config.ts`
+
+If you prefer to use TypeScript for the configuration, use the following `jest.config.ts` configuration and install the relevant types.
+
+```bash
+pnpm add -D ts-jest ts-node @jest/types @types/jest @types/node
+```
+
 
 Install `jest` to use Jest for unit testing.
 
