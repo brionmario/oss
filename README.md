@@ -298,7 +298,7 @@ Add the following two `npm` scripts.
 
 #### Update the default `.changeset/config.json`
 
-Replace the default `.changeset/config.json` file with [this config](.changeset/config.json) file and adjust the configurations accordingly removing the comments.
+Replace the default `.changeset/config.json` file with [this config](setup-guide/.changeset/config.json) file and adjust the configurations accordingly removing the comments.
 
 ## Static Analysis
 
